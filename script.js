@@ -10,6 +10,7 @@ function get(){
     var datainst=localStorage.getItem('instdata')
     alert(datainst)
 }
+
 function search()
 {
 var item = document.getElementById('search').value;
@@ -53,12 +54,9 @@ function find()
     
 function showdata(data) {
     var searchValue = document.getElementById("search").value;
-    var  parra = document.createElement('h1');
-    parra.style.textAlign ="center";
-    parra.style.color = "red";
-    parra.setAttribute("class",'col-12');
-    parra.innerHTML ="Your selected item is " + searchValue;
-    $("#output").append(parra);
+    
+    document.getElementById("output").innerHTML=" "
+   
 
     var carddiv = document.getElementById('output');
     carddiv.setAttribute('class', 'container-fluid row  m-1')
@@ -129,6 +127,6 @@ function showdata(data) {
         cardDiv.appendChild(linkYouTube);
         
         cardAddCol.appendChild(cardAdd);
-        $("#output").append(cardAddCol);
+        document.getElementById("output").appendChild(cardAddCol);
     }
 }
